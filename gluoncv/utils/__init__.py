@@ -13,4 +13,4 @@ from .bbox import bbox_iou
 from .block import recursive_visit, set_lr_mult, freeze_bn
 from .lr_scheduler import LRSequential, LRScheduler
 from .plot_history import TrainingHistory
-from .export_helper import export_block
+from .export_helper import export_block, export_tvm
