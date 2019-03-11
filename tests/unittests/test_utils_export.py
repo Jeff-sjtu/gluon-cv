@@ -21,6 +21,14 @@ def test_export_model_zoo():
             # deeplab model do not support it now, skip
             pass
 
+def test_export_model_zoo_tvm():
+    try:
+        import tvm
+    except ImportError:
+        return
+    for model in ['resnet18_v1']:
+        gcv.utils.export_block(model, gcv.model_zoo.get_model(model, pretrained=True))
+
 if __name__ == '__main__':
     import nose
     nose.runmodule()
